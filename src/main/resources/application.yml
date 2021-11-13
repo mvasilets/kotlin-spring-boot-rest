@@ -1,0 +1,22 @@
+spring:
+  main:
+    banner-mode: "off"
+  application:
+    name: ahub-bot-telegram
+  datasource:
+    url: ${POSTGRES_DB:jdbc:postgresql://localhost:5432/postgres}
+    username: ${POSTGRES_USER:postgres}
+    password: ${POSTGRES_PASSWORD:postgres}
+    hikari:
+      maximum-pool-size: 5
+      connection-timeout: 60000
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob.non_contextual_creation: true
+        show_sql: true
+    hibernate:
+      ddl-auto: none
+
