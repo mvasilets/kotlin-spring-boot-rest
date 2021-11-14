@@ -7,9 +7,9 @@ import javax.persistence.*
 @Table(name = "user_data")
 data class User(
     @Id val id: UUID? = UUID.randomUUID(),
-    val username: String,
-    var password: String,
-    @OneToOne @JoinColumn(name = "profile_id") var profile: Profile,
+    @Column(updatable = false) val username: String,
+    @Column(updatable = false) var password: String?,
+    @OneToOne(cascade = [CascadeType.ALL]) @JoinColumn(name = "profile_id") var profile: Profile,
     @OneToMany(fetch = FetchType.EAGER) var roles: List<Role>
 )
 

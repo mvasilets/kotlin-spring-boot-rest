@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "c9d8d87e-c7d5-4502-83fc-baaaac325110",
+		"name": "Kotlin RestAPI example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APP_HOST}}/users",
+					"host": [
+						"{{APP_HOST}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find user by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APP_HOST}}/users/{{USER_ID}}",
+					"host": [
+						"{{APP_HOST}}"
+					],
+					"path": [
+						"users",
+						"{{USER_ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save or update user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"4bf5d2c7-cd10-446b-944b-1664c08bfb16\",\n    \"username\": \"john.doe\",\n    \"profile\": {\n        \"id\":1,\n        \"firstName\": \"John\",\n        \"lastName\": \"Doe\",\n        \"age\": 21,\n        \"description\": \"updated info\"\n    },\n    \"roles\": [\n        {\n            \"id\": 1,\n            \"name\": \"GUEST\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"USER\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"ADMIN\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APP_HOST}}/users",
+					"host": [
+						"{{APP_HOST}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{APP_HOST}}/users/{{USER_ID}}",
+					"host": [
+						"{{APP_HOST}}"
+					],
+					"path": [
+						"users",
+						"{{USER_ID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "APP_HOST",
+			"value": "localhost:8080"
+		},
+		{
+			"key": "USER_ID",
+			"value": "4bf5d2c7-cd10-446b-944b-1664c08bfb16"
+		}
+	]
+}

@@ -29,6 +29,8 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	compileOnly("org.projectlombok:lombok:1.18.22")
+	implementation("io.springfox:springfox-swagger-ui:3.0.0")
+	implementation ("io.springfox:springfox-boot-starter:3.0.0")
 	runtimeOnly("org.postgresql:postgresql:42.3.1")
 	annotationProcessor("org.projectlombok:lombok:1.18.22")
 	testImplementation("org.springframework.boot:spring-boot-starter-test:2.5.6")
