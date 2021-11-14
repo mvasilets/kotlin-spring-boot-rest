@@ -9,12 +9,15 @@ spring:
     password: ${POSTGRES_PASSWORD:postgres}
     initialization-mode: always
     hikari:
+      schema: demoapp
       maximum-pool-size: 5
       connection-timeout: 60000
-  batch:
-    initialize-schema: always
+  liquibase:
+    parameters:
+      schema: demoapp
+    drop-first: true
+    change-log: classpath:db/changelog/db.changelog-master.json
   jpa:
-    generate-ddl: true
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect

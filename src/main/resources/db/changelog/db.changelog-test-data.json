@@ -1,0 +1,246 @@
+{
+    "databaseChangeLog": [
+        {
+            "changeSet": {
+                "id": "4",
+                "author": "msvasilets",
+                "changes": [
+                    {
+                        "insert": {
+                            "columns": [
+                                {
+                                    "column": {
+                                        "name": "profile_id",
+                                        "value": 1
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "first_name",
+                                        "value": "John"
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "last_name",
+                                        "value": "Doe"
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "age",
+                                        "value": 21
+                                    }
+                                }
+                            ],
+                            "schemaName": "demoapp",
+                            "tableName": "profiles"
+                        }
+                    },
+                    {
+                        "insert": {
+                            "columns": [
+                                {
+                                    "column": {
+                                        "name": "profile_id",
+                                        "value": 2
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "first_name",
+                                        "value": "Jane"
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "last_name",
+                                        "value": "Doe"
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "age",
+                                        "value": 19
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "description",
+                                        "value": "info"
+                                    }
+                                }
+                            ],
+                            "schemaName": "demoapp",
+                            "tableName": "profiles"
+                        }
+                    },
+                    {
+                        "insert": {
+                            "columns": [
+                                {
+                                    "column": {
+                                        "name": "id",
+                                        "value": "0126c30d-947e-45cc-aee8-1980fd58aafd"
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "username",
+                                        "value": "jona.doe21"
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "password",
+                                        "value": "$2a$10$v7XAhrBwy5nPr8RvvATgE.k2UnfgU/YDVD4AuMR29LIeZmbJ/11DC"
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "profile_id",
+                                        "value": 2
+                                    }
+                                }
+                            ],
+                            "schemaName": "demoapp",
+                            "tableName": "user_data"
+                        }
+                    },
+                    {
+                        "insert": {
+                            "columns": [
+                                {
+                                    "column": {
+                                        "name": "id",
+                                        "value": "4bf5d2c7-cd10-446b-944b-1664c08bfb16"
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "username",
+                                        "value": "john.doe"
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "password",
+                                        "value": "$2a$10$K02BhfwmmqxjIC7o4aIoD.RLDAHiQlxD.wa4uhsveZy3s2Lbw7Lra"
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "profile_id",
+                                        "value": 1
+                                    }
+                                }
+                            ],
+                            "schemaName": "demoapp",
+                            "tableName": "user_data"
+                        }
+                    },
+                    {
+                        "insert": {
+                            "columns": [
+                                {
+                                    "column": {
+                                        "name": "roles_id",
+                                        "value": 1
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "user_id",
+                                        "value": "4bf5d2c7-cd10-446b-944b-1664c08bfb16"
+                                    }
+                                }
+                            ],
+                            "schemaName": "demoapp",
+                            "tableName": "user_data_roles"
+                        }
+                    },
+                    {
+                        "insert": {
+                            "columns": [
+                                {
+                                    "column": {
+                                        "name": "roles_id",
+                                        "value": 2
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "user_id",
+                                        "value": "4bf5d2c7-cd10-446b-944b-1664c08bfb16"
+                                    }
+                                }
+                            ],
+                            "schemaName": "demoapp",
+                            "tableName": "user_data_roles"
+                        }
+                    },
+                    {
+                        "insert": {
+                            "columns": [
+                                {
+                                    "column": {
+                                        "name": "roles_id",
+                                        "value": 1
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "user_id",
+                                        "value": "0126c30d-947e-45cc-aee8-1980fd58aafd"
+                                    }
+                                }
+                            ],
+                            "schemaName": "demoapp",
+                            "tableName": "user_data_roles"
+                        }
+                    },
+                    {
+                        "insert": {
+                            "columns": [
+                                {
+                                    "column": {
+                                        "name": "roles_id",
+                                        "value": 2
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "user_id",
+                                        "value": "0126c30d-947e-45cc-aee8-1980fd58aafd"
+                                    }
+                                }
+                            ],
+                            "schemaName": "demoapp",
+                            "tableName": "user_data_roles"
+                        }
+                    },
+                    {
+                        "insert": {
+                            "columns": [
+                                {
+                                    "column": {
+                                        "name": "roles_id",
+                                        "value": 3
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "user_id",
+                                        "value": "0126c30d-947e-45cc-aee8-1980fd58aafd"
+                                    }
+                                }
+                            ],
+                            "schemaName": "demoapp",
+                            "tableName": "user_data_roles"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
