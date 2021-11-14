@@ -22,6 +22,7 @@ class UserServiceImpl(val repository: UserRepository) : UserService {
 
     override fun getById(id: UUID): Optional<ResponseUser> = repository.findById(id).map { user -> toResponse(user) }
 
+    //todo: implement invalid body catching
     override fun update(user: User): ResponseUser = (repository.save(user) to toResponse(user)).second
 
     override fun remove(id: UUID) = repository.deleteById(id)
