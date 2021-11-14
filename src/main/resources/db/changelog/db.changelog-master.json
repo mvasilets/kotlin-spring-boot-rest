@@ -1,0 +1,178 @@
+{
+    "databaseChangeLog": [
+        {
+            "changeSet": {
+                "id": "1",
+                "author": "msvasilets",
+                "changes": [
+                    {
+                        "createTable": {
+                            "tableName": "profiles",
+                            "schemaName": "demoapp",
+                            "columns": [
+                                {
+                                    "column": {
+                                        "name": "profile_id",
+                                        "type": "integer",
+                                        "autoIncrement": true,
+                                        "constraints": {
+                                            "primaryKey": true,
+                                            "nullable": false
+                                        }
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "first_name",
+                                        "type": "varchar(255)",
+                                        "constraints": {
+                                            "nullable": false
+                                        }
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "last_name",
+                                        "type": "varchar(255)",
+                                        "constraints": {
+                                            "nullable": false
+                                        }
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "age",
+                                        "type": "integer",
+                                        "constraints": {
+                                            "nullable": false
+                                        }
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "description",
+                                        "type": "text",
+                                        "constraints": {
+                                            "nullable": true
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "createTable": {
+                            "tableName": "roles",
+                            "schemaName": "demoapp",
+                            "columns": [
+                                {
+                                    "column": {
+                                        "name": "id",
+                                        "type": "integer",
+                                        "autoIncrement": true,
+                                        "constraints": {
+                                            "primaryKey": true,
+                                            "nullable": false
+                                        }
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "name",
+                                        "type": "varchar(255)",
+                                        "constraints": {
+                                            "nullable": false,
+                                            "unique": true
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "createTable": {
+                            "tableName": "user_data",
+                            "schemaName": "demoapp",
+                            "columns": [
+                                {
+                                    "column": {
+                                        "name": "id",
+                                        "type": "uuid",
+                                        "constraints": {
+                                            "primaryKey": true,
+                                            "nullable": false
+                                        }
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "username",
+                                        "type": "varchar(255)",
+                                        "constraints": {
+                                            "nullable": false,
+                                            "unique": true
+                                        }
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "password",
+                                        "type": "varchar(255)",
+                                        "constraints": {
+                                            "nullable": false
+                                        }
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "profile_id",
+                                        "type": "integer",
+                                        "constraints": {
+                                            "nullable": false,
+                                            "unique": true
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "createTable": {
+                            "tableName": "user_data_roles",
+                            "schemaName": "demoapp",
+                            "columns": [
+                                {
+                                    "column": {
+                                        "name": "roles_id",
+                                        "type": "integer"
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "user_id",
+                                        "type": "uuid"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "include": {
+                "file": "classpath:db/changelog/db.changelog-fk.json"
+            }
+        },
+        {
+            "include": {
+                "file": "classpath:db/changelog/db.changelog-initial-data.json"
+            }
+        },
+        {
+            "include": {
+                "file": "classpath:db/changelog/db.changelog-test-data.json"
+            }
+        }
+    ]
+}

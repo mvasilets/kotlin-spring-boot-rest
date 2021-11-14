@@ -1,0 +1,54 @@
+{
+    "databaseChangeLog": [
+        {
+            "changeSet": {
+                "id": "2",
+                "author": "msvasilets",
+                "changes": [
+                    {
+                        "addForeignKeyConstraint": {
+                            "baseColumnNames": "profile_id",
+                            "baseTableName": "user_data",
+                            "baseTableSchemaName": "demoapp",
+                            "constraintName": "fk_user_profile",
+                            "onDelete": "CASCADE",
+                            "onUpdate": "CASCADE",
+                            "referencedColumnNames": "profile_id",
+                            "referencedTableName": "profiles",
+                            "referencedTableSchemaName": "demoapp",
+                            "validate": true
+                        }
+                    },
+                    {
+                        "addForeignKeyConstraint": {
+                            "baseColumnNames": "user_id",
+                            "baseTableName": "user_data_roles",
+                            "baseTableSchemaName": "demoapp",
+                            "constraintName": "fk_user_roles",
+                            "onDelete": "CASCADE",
+                            "onUpdate": "CASCADE",
+                            "referencedColumnNames": "id",
+                            "referencedTableName": "user_data",
+                            "referencedTableSchemaName": "demoapp",
+                            "validate": true
+                        }
+                    },
+                    {
+                        "addForeignKeyConstraint": {
+                            "baseColumnNames": "roles_id",
+                            "baseTableName": "user_data_roles",
+                            "baseTableSchemaName": "demoapp",
+                            "constraintName": "fk_roles_user",
+                            "onDelete": "CASCADE",
+                            "onUpdate": "CASCADE",
+                            "referencedColumnNames": "id",
+                            "referencedTableName": "roles",
+                            "referencedTableSchemaName": "demoapp",
+                            "validate": true
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "databaseChangeLog": [
+        {
+            "changeSet": {
+                "id": "3",
+                "author": "msvasilets",
+                "changes": [
+                    {
+                        "insert": {
+                            "columns": [
+                                {
+                                    "column": {
+                                        "name": "id",
+                                        "value": 1
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "name",
+                                        "value": "GUEST"
+                                    }
+                                }
+                            ],
+                            "schemaName": "demoapp",
+                            "tableName": "roles"
+                        }
+                    },
+                    {
+                        "insert": {
+                            "columns": [
+                                {
+                                    "column": {
+                                        "name": "id",
+                                        "value": 2
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "name",
+                                        "value": "USER"
+                                    }
+                                }
+                            ],
+                            "schemaName": "demoapp",
+                            "tableName": "roles"
+                        }
+                    },
+                    {
+                        "insert": {
+                            "columns": [
+                                {
+                                    "column": {
+                                        "name": "id",
+                                        "value": 3
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "name",
+                                        "value": "ADMIN"
+                                    }
+                                }
+                            ],
+                            "schemaName": "demoapp",
+                            "tableName": "roles"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
