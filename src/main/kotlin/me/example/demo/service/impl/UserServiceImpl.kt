@@ -5,6 +5,7 @@ import me.example.demo.domain.User
 import me.example.demo.domain.repo.UserRepository
 import me.example.demo.dto.ProfileData
 import me.example.demo.dto.ResponseUser
+import me.example.demo.exception.PasswordNotPresentException
 import me.example.demo.service.UserService
 import org.springframework.stereotype.Service
 import java.util.*
@@ -22,10 +23,11 @@ class UserServiceImpl(val repository: UserRepository) : UserService {
 
     override fun getById(id: UUID): Optional<ResponseUser> = repository.findById(id).map { user -> toResponse(user) }
 
-    //todo: implement invalid body catching
-    override fun update(user: User): ResponseUser = (repository.save(user) to toResponse(user)).second
+    override fun update(user: User): ResponseUser {
+        if (user.password == null) throw PasswordNotPresentException()
+        return (repository.save(user) to toResponse(user)).second
+    }
 
     override fun remove(id: UUID) = repository.deleteById(id)
-
 
 }
