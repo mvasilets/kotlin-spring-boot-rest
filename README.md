@@ -9,9 +9,6 @@
 ### Reference Documentation
 
 * [Liquibase docs](https://docs.liquibase.com/home.html)
-* [Kotlin docs](https://kotlinlang.org/docs/home.html)
-* [Spring REST Service](https://spring.io/guides/tutorials/rest/)
-* [Liquibase docs](https://docs.liquibase.com/home.html)
 
 ### Environment Variables
 
